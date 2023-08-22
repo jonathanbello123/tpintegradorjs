@@ -98,7 +98,9 @@
 
     }
 
-
+    #main_registro {
+        background-size: contain;
+    }
 
 }
 
