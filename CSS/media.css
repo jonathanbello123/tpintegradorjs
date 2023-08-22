@@ -1,0 +1,150 @@
+@media (max-width: 992px) {
+    header {
+        justify-content: space-between;
+    }
+
+    #navbar-link {
+        display: none;
+    }
+
+    #products {
+        height: 3200px;
+    }
+
+    #Portada {
+        background-size: contain;
+        height: 760px;
+    }
+
+    #text-content {
+        padding-left: 0;
+        width: 100%;
+        margin-bottom: 80px;
+
+    }
+
+    .span-text {
+        font-size: 60px;
+    }
+
+    #button {
+        display: block;
+        margin: 0 auto;
+
+    }
+
+    #categories-container {
+        flex-wrap: wrap;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin-bottom: 40px;
+    }
+
+    #about-us {
+        height: 700px;
+    }
+
+    .p-about {
+        font-size: 20px;
+    }
+
+    .secondp {
+        font-size: 20px;
+
+    }
+
+    .container-about {
+        margin-top: 0;
+    }
+
+    .carrusel-container {
+        margin-top: 0;
+        gap: 20px;
+    }
+
+    .carrusel-img {
+        width: 250px;
+        height: 250px;
+        margin-top: 30px;
+
+    }
+
+    .menu-icon {
+        height: 40px;
+        margin-top: 4px;
+    }
+
+    .menu-label {
+        display: flex;
+        order: 10;
+        cursor: pointer;
+    }
+
+    .menu-container {
+        display: flex;
+        gap: 20px;
+
+    }
+
+
+
+}
+
+@media (max-width: 576px) {
+    header {
+        position: static;
+    }
+
+    #Portada {
+        background-image: none;
+    }
+
+    #text-content {
+        justify-content: center;
+
+    }
+
+    .p-about {
+        font-size: 15px;
+        width: 90%;
+        margin-left: 25px;
+    }
+
+    .secondp {
+        margin-left: 25px;
+        font-size: 15px;
+        width: 90%;
+    }
+
+    #about-us {
+        height: 400px;
+    }
+
+    .carrusel-container {
+        display: none;
+    }
+
+    #contacto {
+        height: 600px;
+    }
+
+    .h3_con {
+        font-size: 20px;
+    }
+
+    .formulario {
+        height: 400px;
+    }
+}
