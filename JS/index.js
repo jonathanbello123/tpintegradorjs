@@ -1,14 +1,14 @@
 const ProductsContainer = document.querySelector(".card-container");
-const cartContainer = document.querySelector(".cart");
+const cartContainer = document.querySelector(".cart-container");
 const categoriesContainer = document.querySelector(".categories-container");
 const total = document.querySelector(".total");
 const categoriesList = document.querySelectorAll(".categories");
 const showMoreBtn = document.querySelector(".btn-load");
-const buyBtn = document.querySelector(".btn-add");
+const buyBtn = document.querySelector(".btn-buy");
 const cartBubble = document.querySelector(".cart-bubble");
 const cartBtn = document.querySelector(".cart-label");
-const menuBtn = document.querySelector(".menu-container");
-const cartMenu = document.querySelector(".cart-container");
+const menuBtn = document.querySelector(".menu-label");
+const cartMenu = document.querySelector(".cart");
 const barsMenu = document.querySelector(".nav-list");
 const overlay = document.querySelector(".overlay");
 const successModal = document.querySelector(".add-modal");
@@ -139,8 +139,8 @@ const toggleMenu = () => {
 
 const toggleCart = () => {
     cartMenu.classList.toggle("open-cart")
-    if (cartMenu.classList.contains('open-menu')) {
-        cartMenu.classList.remove('open-cart')
+    if (barsMenu.classList.contains('open-menu')) {
+        barsMenu.classList.remove('open-menu')
 
         return
     }

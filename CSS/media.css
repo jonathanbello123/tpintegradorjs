@@ -28,9 +28,12 @@
         gap: 25px;
         z-index: 2;
         display: none;
+    }
 
-
-
+    .menu-label {
+        display: flex;
+        order: 2;
+        cursor: pointer;
     }
 
     .nav-list li {
@@ -135,7 +138,7 @@
     }
 
     .menu-container {
-        display: flex;
+
         gap: 20px;
 
     }
@@ -162,6 +165,7 @@
         padding: 45px 30px;
         gap: 25px;
         z-index: 2;
+        display: flex;
     }
 
     header {
@@ -201,7 +205,6 @@
     }
 
     .open-menu {
-        transform: translateX(0);
         display: flex;
     }
 
