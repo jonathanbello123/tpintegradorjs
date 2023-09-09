@@ -1,11 +1,53 @@
+:root {
+    --background-color: rgba(0, 0, 0, 0.4);
+    --text: #ffffff;
+    --text-especial: #ffff00;
+    --btnsub: #ADFF2F;
+    --btntext: #000000;
+}
+
 @media (max-width: 992px) {
+    header {
+        width: 100%;
+    }
+
+
+    .nav-list {
+        position: absolute;
+        top: 65px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        flex-direction: column;
+        background-color: var(--text-especial);
+        border: 2px solid white;
+        border-top: 0;
+        border-radius: 0 0 15px 15px;
+        align-items: flex-start;
+        padding: 45px 30px;
+        gap: 25px;
+        z-index: 2;
+        display: none;
+
+
+
+    }
+
+    .nav-list li {
+        color: black;
+        border: none;
+    }
+
+    .nav-list li:hover {
+        background-color: var(--btntext);
+        color: var(--text);
+    }
+
     header {
         justify-content: space-between;
     }
 
-    #navbar-link {
-        display: none;
-    }
+
 
     #products {
         height: 3200px;
@@ -81,7 +123,7 @@
 
     }
 
-    .menu-icon {
+    .menu-container {
         height: 40px;
         margin-top: 4px;
     }
@@ -105,8 +147,32 @@
 }
 
 @media (max-width: 576px) {
+    .nav-list {
+        position: absolute;
+        top: 65px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        flex-direction: column;
+        background-color: white;
+        border: 2px solid white;
+        border-top: 0;
+        border-radius: 0 0 15px 15px;
+        align-items: flex-start;
+        padding: 45px 30px;
+        gap: 25px;
+        z-index: 2;
+    }
+
     header {
-        position: static;
+        flex-direction: column;
+    }
+
+    #navbar-link {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     #Portada {
@@ -122,6 +188,21 @@
         font-size: 15px;
         width: 90%;
         margin-left: 25px;
+    }
+
+    .menu-container {
+        display: block;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .navli {
+        padding: 10px 0;
+    }
+
+    .open-menu {
+        transform: translateX(0);
+        display: flex;
     }
 
     .secondp {

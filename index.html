@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
             <img id="img-logo" src="/Assets/favicon/Favicon.png" alt=""></a>
         <nav id="navbar-link">
 
-            <ul id="nav-list">
+            <ul class="nav-list">
                 <a href="index.html">
                     <li class="navli">Home</li>
                 </a>
@@ -34,15 +36,37 @@
 
 
             </ul>
-        </nav>
-        <div class="menu-container">
-            <label for="menu-toggle" class="menu-label">
-                <img src="/Assets/nav/menu.png" alt="" class="menu-icon">
-            </label>
-            <div id="Cart-container">
-                <img class="carrito" src="/Assets/nav/carrito.png" alt="">
+            <div class="cart-label">
+
+                <div class="cart-icon">
+                    <img class="carrito" src="Assets/nav/carrito.png" alt="Carrito de compras">
+                </div>
             </div>
-        </div>
+
+
+            <div class="cart">
+
+                <h2>Tus NFTs</h2>
+
+
+                <div class="cart-container">
+
+                </div>
+
+                <span class="divider"></span>
+
+                <div class="cart-total">
+                    <p>Total:</p>
+                    <span class="total">18.3 ETH</span>
+                </div>
+                <button class="btn-buy">Comprar</button>
+                <button class="btn-delete">Vaciar carrito</button>
+            </div>
+
+            <div class="overlay"></div>
+        </nav>
+
+
     </header>
     <main>
         <section id="Portada">
@@ -62,86 +86,21 @@
         </section>
         <section id="products">
             <h2 class="tittle-products">Productos</h2>
-            <div id="categories-container">
-                <a class="categories" href="">Todas</a>
-                <a class="categories" href="">Musculacion</a>
-                <a class="categories" href="">Funcional</a>
-                <a class="categories" href="">personalizados</a>
+            <div class="categories-container">
+                <button class="categories category active category-button" data-category="Todas">Todas</button>
+                <button class="categories category category-button" data-category="Musculacion">Musculación</button>
+                <button class="categories  category category-button" data-category="Funcional">Funcional</button>
+                <button class="categories category category-button"
+                    data-category="Personalizados">Personalizados</button>
             </div>
+
             <div class="card-container">
-                <div class="card-group">
-                    <div class="card">
-                        <img class="img-product" src="/Assets/Products/card-hombre.png" alt="">
-                        <div class="products-info">
-                            <h3 class="tittle-card">Musculacion <span class="Card-span">Inicial</span></h3>
-                            <h4>Rutina</h4>
-
-                        </div>
-                        <div class="container-btnPro">
-                            <a class="btn-card" href="">Comprar</a>
-                        </div>
-
-                    </div>
 
 
-                    <div class="card">
-                        <img class="img-product" src="/Assets//Products/mujer-card.png" alt="">
-                        <div class="products-info">
-                            <h3 class="tittle-card">Funcional <span class="Card-span">Inicial</span></h3>
-                            <h4>Rutina</h4>
-                        </div>
-                        <div class="container-btnPro">
-                            <a class="btn-card" href="">Comprar</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="img-product" src="/Assets/Products/perso-card.png" alt="">
-                        <div class="products-info">
-                            <h3 class="tittle-card">Personalizado <span class="Card-span">Inicial</span></h3>
-                            <h4>Rutina</h4>
-                        </div>
-                        <div class="container-btnPro">
-                            <a class="btn-card" href="">Comprar</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-group">
-                    <div class="card">
-                        <img class="img-product" src="/Assets/Products/card-hombre.png" alt="">
-                        <div class="products-info">
-                            <h3 class="tittle-card">Musculacion <span class="Card-span">Avanzado</span></h3>
-                            <h4>Rutina</h4>
-                            <h4>Dieta</h4>
-                        </div>
-                        <div class="container-btnPro">
-                            <a class="btn-card" href="">Comprar</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="img-product" src="/Assets/Products/mujer-card.png" alt="">
-                        <div class="products-info">
-                            <h3 class="tittle-card">Funcional <span class="Card-span">Avanzado</span></h3>
-                            <h4>Rutina</h4>
-                            <h4>Dieta</h4>
-                        </div>
-                        <div class="container-btnPro">
-                            <a class="btn-card" href="">Comprar</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="img-product" src="/Assets//Products/perso-card.png" alt="">
-                        <div class="products-info">
-                            <h3 class="tittle-card">Personalizado <span class="Card-span">Avanzado</span></h3>
-                            <h4>Rutina</h4>
-                            <h4>Dieta</h4>
-                        </div>
-                        <div class="container-btnPro">
-                            <a class="btn-card" href="">Comprar</a>
-                        </div>
-                    </div>
-                </div>
             </div>
-
+            <div class="btn-container">
+                <button class="btn-load">Ver mas</button>
+            </div>
         </section>
         <section id="about-us">
             <div class="container-about">
@@ -207,6 +166,8 @@
 
         </footer>
     </main>
+    <script src="/JS/data.js"></script>
+    <script src="/JS/index.js"></script>
 </body>
 
 
