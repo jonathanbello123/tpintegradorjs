@@ -1,8 +1,8 @@
 const ProductsContainer = document.querySelector(".card-container");
 const cartContainer = document.querySelector(".cart-container");
-const categoriesContainer = document.querySelector(".categories-container");
+const categoriesContainer = document.querySelector(".categories");
 const total = document.querySelector(".total");
-const categoriesList = document.querySelectorAll(".categories");
+const categoriesList = document.querySelectorAll(".category");
 const showMoreBtn = document.querySelector(".btn-load");
 const buyBtn = document.querySelector(".btn-buy");
 const cartBubble = document.querySelector(".cart-bubble");
@@ -14,14 +14,14 @@ const overlay = document.querySelector(".overlay");
 const successModal = document.querySelector(".add-modal");
 const deleteBtn = document.querySelector(".btn-delete");
 
-let cart = JSON.parse(localStorage.getItem("cart")) || []
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 
 
 const createTemplate = (card) => {
     const { id, name, beneficio, bid, cardIMG, nivel } = card;
     return `<div class="card">
-      <img class="img-product" src=${cardIMG} alt="${name}">
+      <img class="img-product" src="${cardIMG}" alt="${name}">
       <div class="products-info">
           <h3 class="tittle-card">${name} <span class="Card-span">${nivel}</span></h3>
           <h4 class="beneficios">${beneficio}</h4>
@@ -31,7 +31,12 @@ const createTemplate = (card) => {
               </div>
               <div class="container-btnPro" data-id='${id}' 
               data-name='${name}' data-bid='${bid}' data-img='${cardIMG}'>
-              <button class="btn-card">Añadir</button>
+              <button class="btn-add"
+              data-id='${id}'
+              data-name='${name}'
+              data-bid='${bid}'
+              data-img='${cardIMG}'>Añadir</button>
+              
               </div>
           </div>
       </div>
@@ -42,7 +47,7 @@ const createTemplate = (card) => {
 
 const renderCards = (cardList) => {
 
-    ProductsContainer.innerHTML = cardList.map(createTemplate).join("");
+    ProductsContainer.innerHTML += cardList.map(createTemplate).join("");
 };
 
 const isLastIndexOf = () => {
@@ -50,17 +55,13 @@ const isLastIndexOf = () => {
 }
 
 const showMoreCards = () => {
-    appState.currentCardsIndex += 1;
-    const { cards, currentCardsIndex } = appState;
-    if (currentCardsIndex < cards.length) {
-        const nextCards = cards[currentCardsIndex];
-        if (nextCards) {
-            renderCards(nextCards);
-        }
-    } else {
-        showMoreBtn.classList.add("hidden");
+    appState.currentCardsIndex += 1
+    let { cards, currentCardsIndex } = appState
+    renderCards(cards[currentCardsIndex])
+    if (isLastIndexOf()) {
+        showMoreBtn.classList.add("hidden")
     }
-};
+}
 const setShowMoreVisibility = () => {
     if (!appState.activeFilter) {
         showMoreBtn.classList.remove("hidden")
@@ -96,7 +97,7 @@ const changeFilterState = (btn) => {
 // funcion para saber si el elemento que se apreto un boton de categoria y no esta activo
 const isInactiveFilter = (element) => {
     return (
-        element.classList.contains('categories') &&
+        element.classList.contains('category') &&
         !element.classList.contains('active')
     );
 };
@@ -105,21 +106,22 @@ const isInactiveFilter = (element) => {
 const applyFilter = (event) => {
     const { target } = event;
     if (!isInactiveFilter(target)) return;
-
-    changeFilterState(target);
-
-    if (!appState.activeFilter || appState.activeFilter === "Todas") {
-        renderCards(appState.cards[0]);
-        appState.currentCardsIndex = 0;
-    } else {
-        renderFilteredCards();
-        appState.currentCardsIndex = 0;
+    ProductsContainer.innerHTML = '';
+    changeFilterState(target)
+    if (appState.activeFilter) {
+        renderFilteredCards()
+        appState.currentCardsIndex = 0
+        return
     }
-};
+    renderCards(appState.cards[0])
+
+}
+
+
 // funcion para filtrar los productos por categoria y renderizarlos
 const renderFilteredCards = () => {
     const filteredCards = productsData.filter(
-        (cards) => cards.category === appState.activeFilter
+        (card) => card.category === appState.activeFilter
     )
     renderCards(filteredCards)
 }
@@ -183,10 +185,10 @@ const closeOnOverlayClick = () => {
 const createCartProductTemplate = (cartProduct) => {
     const { id, name, bid, cardIMG, quantity } = cartProduct
     return `<div class="cart-item">
-    <img class="img-cart" src="${cardIMG} " alt="">
+    <img class="img-cart" src=${cardIMG} alt=" ${name} "/>
     <div class="item-info">
         <h3 class="item-tittle">${name} </h3>
-        <p class="item bid">precio:<span class="item-price">${bid} </span></p>
+        <p class="item-bid">precio:<span class="item-price">${bid} </span></p>
 
     </div>
     <div class="item-handler">
@@ -197,7 +199,6 @@ const createCartProductTemplate = (cartProduct) => {
 </div>`
 }
 
-
 // funcion para renderizar los productos del carrito o el mensaje de no hay productos
 
 const renderCart = () => {
@@ -205,7 +206,7 @@ const renderCart = () => {
         cartContainer.innerHTML = "No hay productos en el carrito"
         return
     }
-    cartContainer.innerHTML = cart.map(createCartProductTemplate).Join(" ")
+    cartContainer.innerHTML = cart.map(createCartProductTemplate).join(" ");
 }
 
 const getCartTotal = () => {
@@ -243,27 +244,27 @@ const updateCartState = () => {
     disableBtn(deleteBtn)
     renderCartBubble()
 }
-const createProductData = ({ id, name, bid, img }) => {
+const createProductData = ({ id, name, bid, cardIMG }) => {
     return {
         id,
         name,
         bid,
-        img
+        cardIMG
     }
 }
 
 const isExistingCartProduct = (card) => {
-    return cart.find((item) => item.id === product.id)
+    return cart.find((item) => item.id === card.id)
 }
 
 const addUnitiToProduct = (card) => {
-    cart = cart.map((cartProduct) => cartProduct.id === card.id)
+    cart = cart.map((cartProduct) => cartProduct.id === card.id
         ? { ...cartProduct, quantity: cartProduct.quantity + 1 }
-        : cartProduct;
+        : cartProduct);
 }
 
 const createCartProduct = (card) => {
-    cart = [...cart, { ...product, quantity: 1 }]
+    cart = [...cart, { ...card, quantity: 1 }]
 }
 
 
@@ -277,8 +278,8 @@ const showSuccesModal = (msg) => {
 
 
 const addProduct = (e) => {
-    if (!e.target.classList.contains("btn-add")) return
-    const product = createCartProduct(e.target.dataset)
+    if (!e.target.classList.contains("btn-add")) return;
+    const card = createProductData(e.target.dataset)
     if (isExistingCartProduct(card)) {
         addUnitiToProduct(card)
         showSuccesModal("se agrego una unidad del producto al carrito")
@@ -381,3 +382,9 @@ const init = () => {
 
 
 init()
+
+
+
+
+
+

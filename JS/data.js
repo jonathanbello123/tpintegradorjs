@@ -66,7 +66,7 @@ const productsData = [
         beneficio: "Rutina-Dieta-otra actividad",
         bid: "$10000",
         category: "Musculacion",
-        cardIMG: "./Assets/Products/card-hombre.png",
+        cardIMG: "./Assets/Products/card-hombre.png"
 
     },
     {
@@ -76,7 +76,7 @@ const productsData = [
         beneficio: "Rutina-Dieta-otra actividad",
         bid: "$10000",
         category: "Funcional",
-        cardIMG: "./Assets//Products/mujer-card.png",
+        cardIMG: "./Assets/Products/mujer-card.png",
 
     },
     {

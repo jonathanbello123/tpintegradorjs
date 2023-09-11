@@ -22,32 +22,29 @@
             <img id="img-logo" src="/Assets/favicon/Favicon.png" alt=""></a>
         <nav id="navbar-link">
 
-
-
             <ul class="nav-list">
-                <a href="index.html">
+                <a href="#Portada">
                     <li class="navli">Home</li>
                 </a>
+                <a href="#products">
 
-                <li class="navli">Planes</li>
-                <li class="navli">Sobre nosotros</li>
-                <li class="navli">Contacto</li>
+                    <li class="navli">Planes</li>
+                </a>
+                <a href="#about-us">
+                    <li class="navli">Sobre nosotros</li>
+                </a>
+                <a href="#contacto">
+                    <li class="navli">Contacto</li>
+                </a>
+
                 <a href="iniciar.html">
                     <li class="navli"> Iniciar</li>
                 </a>
 
 
             </ul>
-            <div class="menu-label">
-                <img src="/Assets/nav/menu.png" alt="" class=" menu-icon" />
-            </div>
-            <div class="cart-label">
 
-                <div class="cart-icon">
-                    <img class="carrito" src="Assets/nav/carrito.png" alt="Carrito de compras">
-                </div>
-                <div class="cart-bubble">0</div>
-            </div>
+
 
 
             <div class="cart">
@@ -56,6 +53,7 @@
 
 
                 <div class="cart-container">
+
 
                 </div>
 
@@ -72,16 +70,28 @@
             <div class="overlay"></div>
 
         </nav>
+        <div class="menu-carrito">
+            <div class="cart-label">
 
+                <div class="cart-icon">
+                    <img class="carrito" src="Assets/nav/carrito.png" alt="Carrito de compras">
 
+                </div>
+                <div class="cart-bubble">0</div>
+            </div>
+            <div class="menu-label">
+                <img src="/Assets/nav/menu.png" alt="" class=" menu-icon" />
+            </div>
+        </div>
     </header>
     <main>
         <section id="Portada">
             <div class="container-portada">
                 <div id="text-content">
 
-                    <span class="span-text">Empodera tu cuerpo inspira tu mente: ¡Bienvenido a un nuevo nivel en Pulse
-                        <h1 class="tittle-gym">GYM!</h1>
+                    <h1 class="span-text">Empodera tu cuerpo inspira tu mente: ¡Bienvenido a un nuevo nivel en Pulse
+                    </h1>
+                    <h2 class="tittle-gym">GYM!</h2>
                     </span>
                     <div class="botones">
                         <a class="btn-ri" href="register.html">Empezar</a>
@@ -93,21 +103,18 @@
         </section>
         <section id="products">
             <h2 class="tittle-products">Productos</h2>
-            <div class="categories-container">
-                <button class="categories category active category-button" data-category="Todas">Todas</button>
-                <button class="categories category category-button" data-category="Musculacion">Musculación</button>
-                <button class="categories  category category-button" data-category="Funcional">Funcional</button>
-                <button class="categories category category-button"
-                    data-category="Personalizados">Personalizados</button>
+            <div class="categories">
+                <button class="category active">Todas</button>
+                <button class="category" data-category="Musculacion">Musculacion</button>
+                <button class="category" data-category="Funcional">Funcional</button>
+                <button class="category" data-category="Personalizados">Personalizados</button>
             </div>
 
             <div class="card-container">
 
+            </div>
+            <button class="btn-load">Ver mas</button>
 
-            </div>
-            <div class="btn-container">
-                <button class="btn-load">Ver mas</button>
-            </div>
         </section>
         <section id="about-us">
             <div class="container-about">
@@ -173,6 +180,7 @@
 
         </footer>
     </main>
+    <div class="add-modal"></div>
     <script src="/JS/data.js"></script>
     <script src="/JS/index.js"></script>
 </body>

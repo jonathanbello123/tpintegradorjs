@@ -74,6 +74,7 @@ header {
 #navbar-link {
     display: flex;
     gap: 20px;
+    justify-content: space-around;
 }
 
 #Btn-sesion {
@@ -165,8 +166,9 @@ p {
 
 
 #products {
-    min-height: 100vh;
-    padding: 10% 0;
+    max-height: 100%;
+    width: 100%;
+    padding: 40px 0;
     background-image: url(/Assets/bgs/b2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,28 +176,25 @@ p {
     background-blend-mode: multiply;
     display: flex;
     flex-direction: column;
-    gap: 5%;
-
+    gap: 50px;
     align-items: center;
 
-}
-
-.categories-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .categories {
-    color: var(--text);
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid var(--text);
-    border-radius: 40px;
-    color: var(--text);
-    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category {
+    background: var(--text);
+    border: none;
+    padding: 10px 15px;
+    color: var(--btntext);
+    border-radius: 20px;
     cursor: pointer;
-    margin: 20px;
 }
 
 .active {
@@ -219,6 +218,7 @@ p {
 }
 
 .card-container {
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +231,7 @@ p {
 
 .card {
     background-color: rgba(0, 0, 0, 0.8);
-    height: 400px;
+    height: 420px;
 
 
 }
@@ -278,16 +278,7 @@ p {
 
 }
 
-.btn-card {
-    padding: 4px 5px;
-    background-color: var(--btnsub);
-    border: 2px solid var(--text);
-    border-radius: 40px;
-    color: var(--btntext);
-    font-size: 15px;
-    cursor: pointer;
 
-}
 
 .btn-card:hover {
     background-color: var(--text-especial);
@@ -306,7 +297,6 @@ p {
 
 #about-us {
     min-height: 100vh;
-    padding: 10% 0;
     background-image: url(/Assets/bgs/bg3.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -326,9 +316,6 @@ p {
     color: var(--text-especial);
 }
 
-.container-about {
-    margin-top: 50px;
-}
 
 
 .carrusel-container {
@@ -378,15 +365,13 @@ p {
 }
 
 .btn-load {
-    display: inline-block;
-    color: var(--text);
-    background-color: transparent;
-    border: 2px solid var(--text);
-    border-radius: 40px;
-    color: var(--text);
-    font-size: 30px;
+    margin-top: 30px;
+    border: 1px solid var(--text-especial);
+    padding: 10px 35px;
+    color: var(--bg-white);
+    border-radius: 10px;
     cursor: pointer;
-    width: 150%;
+    border-radius: 20px;
 }
 
 .btn-load:hover {
@@ -395,7 +380,7 @@ p {
 }
 
 #contacto {
-    min-height: 100vh;
+
     padding: 10% 0;
     background-image: url(/Assets/bgs/bg4.jpg);
     background-repeat: no-repeat;
@@ -493,6 +478,29 @@ p {
     color: var(--text);
 }
 
+.hidden {
+    display: none;
+}
+
+.active-modal {
+    transform: translateY(0);
+    transition: all 0.5s ease-in;
+}
+
+.add-modal {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-white);
+    background-color: green;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.5s ease-out;
+    transform: translateY(200%);
+}
+
 .whatsapp {
     position: fixed;
     width: 55px;
@@ -521,6 +529,7 @@ p {
     display: none;
 
 }
+
 
 .cart {
     position: absolute;
@@ -552,20 +561,17 @@ p {
 
 .cart-bubble {
     position: absolute;
-    top: -8px;
-    right: -8px;
-    text-align: center;
-    background: white;
-    color: var(--text);
-    font-size: 60px;
-    font-weight: 500;
-    height: 18px;
-    width: 18px;
+    top: 40px;
+    right: 290px;
+    background-color: var(--text-especial);
+    color: var(--btntext);
+    font-size: 14px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 1px;
-    border-radius: 50%;
 }
 
 .cart-icon {
@@ -695,9 +701,15 @@ p {
     font-size: 18px;
 }
 
+
 .btn-add {
-    border-radius: 12px;
-    background-color: rgb(12, 234, 12);
+    padding: 4px 5px;
+    background-color: var(--btnsub);
+    border: 2px solid var(--text);
+    border-radius: 40px;
+    color: var(--btntext);
+    font-size: 15px;
+    cursor: pointer;
 }
 
 

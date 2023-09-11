@@ -7,16 +7,27 @@
 }
 
 @media (max-width: 992px) {
+
     header {
         width: 100%;
+
     }
 
+    .menu-carrito {
+        display: flex;
+        gap: 30px;
+    }
+
+    .cart-icon {
+        width: 50px;
+        margin: 0;
+        order: 2;
+    }
 
     .nav-list {
         position: absolute;
         top: 65px;
-        left: 5%;
-        right: 5%;
+        left: 70%;
         width: 90%;
         flex-direction: column;
         background-color: var(--text-especial);
@@ -28,11 +39,25 @@
         gap: 25px;
         z-index: 2;
         display: none;
+        order: 1;
+    }
+
+    .open-menu {
+        display: flex;
     }
 
     .menu-label {
         display: flex;
-        order: 2;
+        order: 1;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+
+
+    .cart-label {
+        display: flex;
+        order: 3;
         cursor: pointer;
     }
 
@@ -46,30 +71,53 @@
         color: var(--text);
     }
 
-    header {
-        justify-content: space-between;
-    }
 
 
 
     #products {
-        height: 3200px;
+        height: 340vh;
     }
 
     #Portada {
         background-size: contain;
-        height: 760px;
+        height: 400px;
     }
 
     #text-content {
         padding-left: 0;
         width: 100%;
         margin-bottom: 80px;
+        gap: 20px;
 
     }
 
     .span-text {
-        font-size: 60px;
+        font-size: 30px;
+        width: 50%;
+    }
+
+    .tittle-gym {
+        width: 50%;
+    }
+
+    .botones {
+        width: 50%;
+        margin-top: 30px;
+    }
+
+    .cart-bubble {
+        position: absolute;
+        top: 40px;
+        right: 120px;
+        background-color: var(--text);
+        color: var(--btntext);
+        font-size: 14px;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     #button {
@@ -98,15 +146,19 @@
     }
 
     #about-us {
-        height: 700px;
+        height: 200px;
+        padding: 0;
+        min-height: 700px;
     }
 
     .p-about {
-        font-size: 20px;
+        font-size: 28px;
+        font-weight: 600;
     }
 
     .secondp {
-        font-size: 20px;
+        font-size: 25px;
+        font-weight: 600;
 
     }
 
@@ -115,8 +167,7 @@
     }
 
     .carrusel-container {
-        margin-top: 0;
-        gap: 20px;
+        display: none;
     }
 
     .carrusel-img {
@@ -150,6 +201,7 @@
 }
 
 @media (max-width: 576px) {
+
     .nav-list {
         position: absolute;
         top: 65px;
@@ -168,20 +220,33 @@
         display: flex;
     }
 
-    header {
-        flex-direction: column;
+    #portada {
+        background-image: url(/Assets/bgs/bg1.jpg);
     }
+
+    .span-text {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .tittle-gym {
+        width: 100%;
+    }
+
+    .botones {
+        width: 100%;
+        margin-top: 30px;
+    }
+
 
     #navbar-link {
         display: none;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        order: 1;
     }
 
-    #Portada {
-        background-image: none;
-    }
 
     #text-content {
         justify-content: center;
@@ -215,16 +280,14 @@
     }
 
     #about-us {
-        height: 400px;
+        min-height: 400px;
     }
 
     .carrusel-container {
         display: none;
     }
 
-    #contacto {
-        height: 600px;
-    }
+
 
     .h3_con {
         font-size: 20px;
