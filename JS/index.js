@@ -180,7 +180,7 @@ const closeOnOverlayClick = () => {
 const createCartProductTemplate = (cartProduct) => {
     const { id, name, bid, cardIMG, quantity } = cartProduct
     return `<div class="cart-item">
-    <img class="img-cart" src=${cardIMG} alt=" ${name} "/>
+    <img class="img-cart" src='${cardIMG}' alt=" ${name} "/>
     <div class="item-info">
         <h3 class="item-tittle">${name} </h3>
         <p class="item-bid">precio:<span class="item-price">${bid} </span></p>
@@ -213,7 +213,7 @@ const getCartTotal = () => {
 };
 
 const showCartTotal = () => {
-    total.innerHTML = `${getCartTotal().toFixed(2)} eTH`;
+    total.innerHTML = `${getCartTotal().toFixed(2)} pesos`;
 };
 
 
