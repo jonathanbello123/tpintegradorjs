@@ -4,7 +4,7 @@ const productsData = [
         name: "Musculacion",
         nivel: "inicial",
         beneficio: "Rutina",
-        bid: "$4500",
+        bid: 4500,
         category: "Musculacion",
         cardIMG: "./Assets/Products/card-hombre.png",
 
@@ -14,7 +14,7 @@ const productsData = [
         name: "Funcional",
         nivel: "inicial",
         beneficio: "Rutina",
-        bid: "$4500",
+        bid: 4500,
         category: "Funcional",
         cardIMG: "./Assets//Products/mujer-card.png",
 
@@ -24,7 +24,7 @@ const productsData = [
         name: "Personalizado",
         nivel: "inicial",
         beneficio: "Rutina",
-        bid: "$4500",
+        bid: 4500,
         category: "Personalizados",
         cardIMG: "./Assets/Products/perso-card.png",
 
@@ -34,7 +34,7 @@ const productsData = [
         name: "Musculacion",
         nivel: "Avanzado",
         beneficio: "Rutina-Dieta",
-        bid: "$7000",
+        bid: 7000,
         category: "Musculacion",
         cardIMG: "./Assets/Products/card-hombre.png",
 
@@ -44,7 +44,7 @@ const productsData = [
         name: "Funcional",
         nivel: "Avanzado",
         beneficio: "Rutina-Dieta",
-        bid: "$7000",
+        bid: 7000,
         category: "Funcional",
         cardIMG: "./Assets//Products/mujer-card.png",
 
@@ -54,7 +54,7 @@ const productsData = [
         name: "Personalizado",
         nivel: "Avanzado",
         beneficio: "Rutina-Dieta",
-        bid: "$7000",
+        bid: 7000,
         category: "Personalizados",
         cardIMG: "./Assets/Products/perso-card.png",
 
@@ -64,7 +64,7 @@ const productsData = [
         name: "Musculacion",
         nivel: "Premium",
         beneficio: "Rutina-Dieta-otra actividad",
-        bid: "$10000",
+        bid: 10000,
         category: "Musculacion",
         cardIMG: "./Assets/Products/card-hombre.png"
 
@@ -74,7 +74,7 @@ const productsData = [
         name: "Funcional",
         nivel: "Premium",
         beneficio: "Rutina-Dieta-otra actividad",
-        bid: "$10000",
+        bid: 10000,
         category: "Funcional",
         cardIMG: "./Assets/Products/mujer-card.png",
 
@@ -84,7 +84,7 @@ const productsData = [
         name: "Personalizados",
         nivel: "Premium",
         beneficio: "Rutina-Dieta-otra actividad",
-        bid: "$10000",
+        bid: 10000,
         category: "Personalizados",
         cardIMG: "./Assets/Products/perso-card.png",
 

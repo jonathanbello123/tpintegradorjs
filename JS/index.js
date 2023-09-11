@@ -21,7 +21,7 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const createTemplate = (card) => {
     const { id, name, beneficio, bid, cardIMG, nivel } = card;
     return `<div class="card">
-      <img class="img-product" src="${cardIMG}" alt="${name}">
+      <img class="img-product" src='${cardIMG}' alt="${name}">
       <div class="products-info">
           <h3 class="tittle-card">${name} <span class="Card-span">${nivel}</span></h3>
           <h4 class="beneficios">${beneficio}</h4>
@@ -29,8 +29,6 @@ const createTemplate = (card) => {
               <div class="container-precio">
                   <span class="precio">Precio: </span><span class="precio">${bid}</span>
               </div>
-              <div class="container-btnPro" data-id='${id}' 
-              data-name='${name}' data-bid='${bid}' data-img='${cardIMG}'>
               <button class="btn-add"
               data-id='${id}'
               data-name='${name}'
@@ -71,8 +69,8 @@ const setShowMoreVisibility = () => {
 }
 
 
-// filtros 
-// funcion para cambiar el estado de los botones
+
+
 const changeBtnActiveState = (selectedCategory) => {
     const categories = [...categoriesList]
     categories.forEach((categorybtn) => {
@@ -85,7 +83,7 @@ const changeBtnActiveState = (selectedCategory) => {
 }
 
 
-// funcion para cambiar el estado del filtro activo 
+
 
 const changeFilterState = (btn) => {
     appState.activeFilter = btn.dataset.category
@@ -94,7 +92,7 @@ const changeFilterState = (btn) => {
 }
 
 
-// funcion para saber si el elemento que se apreto un boton de categoria y no esta activo
+
 const isInactiveFilter = (element) => {
     return (
         element.classList.contains('category') &&
@@ -118,7 +116,7 @@ const applyFilter = (event) => {
 }
 
 
-// funcion para filtrar los productos por categoria y renderizarlos
+
 const renderFilteredCards = () => {
     const filteredCards = productsData.filter(
         (card) => card.category === appState.activeFilter
@@ -126,8 +124,7 @@ const renderFilteredCards = () => {
     renderCards(filteredCards)
 }
 
-// menu interface
-// funcion para mostrar el menu hamburguesa u ocultarlo el menu hamburguesa y el overlay
+
 
 const toggleMenu = () => {
     barsMenu.classList.toggle("open-menu")
@@ -150,7 +147,7 @@ const toggleCart = () => {
 }
 
 
-// funcion para cerrar el menu hamburguesa 
+
 
 const closeOnClick = (e) => {
     if (!e.target.classList.contains('nav-list')) return
@@ -178,9 +175,7 @@ const closeOnOverlayClick = () => {
     overlay.classList.remove('show-overlay');
 };
 
-// logica para agregar items al carrito
 
-// funcion para crear el template de un producto en el carrito
 
 const createCartProductTemplate = (cartProduct) => {
     const { id, name, bid, cardIMG, quantity } = cartProduct
@@ -199,7 +194,7 @@ const createCartProductTemplate = (cartProduct) => {
 </div>`
 }
 
-// funcion para renderizar los productos del carrito o el mensaje de no hay productos
+
 
 const renderCart = () => {
     if (!cart.length) {
@@ -210,12 +205,16 @@ const renderCart = () => {
 }
 
 const getCartTotal = () => {
-    return cart.reduce((accumulator, current) => accumulator + Number(current.bid) * current.quantity, 0)
-}
+    return cart.reduce(
+        (accumulator, current) =>
+            accumulator + Number(current.bid) * current.quantity,
+        0
+    );
+};
 
 const showCartTotal = () => {
-    total.innerHTML = `${getCartTotal().toFixed(2)} `
-}
+    total.innerHTML = `${getCartTotal().toFixed(2)} eTH`;
+};
 
 
 const renderCartBubble = () => {
