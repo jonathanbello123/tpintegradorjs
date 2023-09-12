@@ -178,9 +178,9 @@ const closeOnOverlayClick = () => {
 
 
 const createCartProductTemplate = (cartProduct) => {
-    const { id, name, bid, cardIMG, quantity } = cartProduct
+    const { id, name, bid, img, quantity } = cartProduct
     return `<div class="cart-item">
-    <img class="img-cart" src='${cardIMG}' alt=" ${name} "/>
+    <img class="img-cart" src='${img}' alt=" ${name} "/>
     <div class="item-info">
         <h3 class="item-tittle">${name} </h3>
         <p class="item-bid">precio:<span class="item-price">${bid} </span></p>
@@ -243,12 +243,12 @@ const updateCartState = () => {
     disableBtn(deleteBtn)
     renderCartBubble()
 }
-const createProductData = ({ id, name, bid, cardIMG }) => {
+const createProductData = ({ id, name, bid, img }) => {
     return {
         id,
         name,
         bid,
-        cardIMG
+        img
     }
 }
 

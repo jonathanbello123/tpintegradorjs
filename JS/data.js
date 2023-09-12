@@ -6,7 +6,7 @@ const productsData = [
         beneficio: "Rutina",
         bid: 4500,
         category: "Musculacion",
-        cardIMG: "./Assets/Products/card-hombre.png",
+        cardIMG: "/assets/products/card-hombre.png",
 
     },
     {
@@ -16,7 +16,7 @@ const productsData = [
         beneficio: "Rutina",
         bid: 4500,
         category: "Funcional",
-        cardIMG: "./Assets//Products/mujer-card.png",
+        cardIMG: "/assets/products/mujer-card.png",
 
     },
     {
@@ -26,7 +26,7 @@ const productsData = [
         beneficio: "Rutina",
         bid: 4500,
         category: "Personalizados",
-        cardIMG: "./Assets/Products/perso-card.png",
+        cardIMG: "/assets/products/perso-card.png",
 
     },
     {
@@ -36,7 +36,7 @@ const productsData = [
         beneficio: "Rutina-Dieta",
         bid: 7000,
         category: "Musculacion",
-        cardIMG: "./Assets/Products/card-hombre.png",
+        cardIMG: "/assets/products/card-hombre.png",
 
     },
     {
@@ -46,7 +46,7 @@ const productsData = [
         beneficio: "Rutina-Dieta",
         bid: 7000,
         category: "Funcional",
-        cardIMG: "./Assets//Products/mujer-card.png",
+        cardIMG: "/assets//products/mujer-card.png",
 
     },
     {
@@ -56,7 +56,7 @@ const productsData = [
         beneficio: "Rutina-Dieta",
         bid: 7000,
         category: "Personalizados",
-        cardIMG: "./Assets/Products/perso-card.png",
+        cardIMG: "/assets/products/perso-card.png",
 
     },
     {
@@ -66,7 +66,7 @@ const productsData = [
         beneficio: "Rutina-Dieta-otra actividad",
         bid: 10000,
         category: "Musculacion",
-        cardIMG: "./Assets/Products/card-hombre.png"
+        cardIMG: "/assets/products/card-hombre.png"
 
     },
     {
@@ -76,7 +76,7 @@ const productsData = [
         beneficio: "Rutina-Dieta-otra actividad",
         bid: 10000,
         category: "Funcional",
-        cardIMG: "./Assets/Products/mujer-card.png",
+        cardIMG: "/assets/products/mujer-card.png",
 
     },
     {
@@ -86,7 +86,7 @@ const productsData = [
         beneficio: "Rutina-Dieta-otra actividad",
         bid: 10000,
         category: "Personalizados",
-        cardIMG: "./Assets/Products/perso-card.png",
+        cardIMG: "/assets/products/perso-card.png",
 
     },
 
