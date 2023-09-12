@@ -48,6 +48,8 @@ const productsData = [
         category: "Funcional",
         cardIMG: "/assets/products/mujer-card.png",
 
+
+
     },
     {
         id: 6,
