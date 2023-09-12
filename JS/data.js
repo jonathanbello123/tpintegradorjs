@@ -46,7 +46,7 @@ const productsData = [
         beneficio: "Rutina-Dieta",
         bid: 7000,
         category: "Funcional",
-        cardIMG: "/assets//products/mujer-card.png",
+        cardIMG: "/assets/products/mujer-card.png",
 
     },
     {
