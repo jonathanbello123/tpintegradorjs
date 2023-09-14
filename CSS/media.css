@@ -234,6 +234,7 @@
         justify-content: center;
         width: 40%;
 
+
     }
 
     .card-container {
@@ -331,9 +332,7 @@
         margin-top: 0;
     }
 
-    #text-content {
-        margin-top: 50px;
-    }
+
 
     .tittle-about {
         font-size: 40px;

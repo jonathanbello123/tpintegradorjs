@@ -42,7 +42,7 @@ const validateEmail = () => {
     if (!emailRegular.test(email.value)) {
         emailEror.textContent = "❌por favor introduce un mail valido"
         emailEror.classList.add('error')
-        email.classList.add('inputError')
+
 
     } else {
         emailEror.textContent = ""
@@ -64,10 +64,20 @@ const validateForm = (e) => {
     if (!emailEror.classList.contains("error") && !nameError.classList.contains("error") && !lastNameError.classList.contains("error")) {
         alert("El formulario se ha enviado con exito")
         console.log("nashe")
+        lastName.classList.remove('inputError')
+        nameI.classList.remove('inputError')
+        email.classList.remove('inputError')
 
+    } else {
+        lastName.classList.add('inputError')
+        nameI.classList.add('inputError')
+        email.classList.add('inputError')
     }
+
     form.reset()
+
 }
+
 
 const xd = () => {
     form.addEventListener("submit", validateForm)
