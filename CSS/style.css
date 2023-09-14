@@ -714,6 +714,13 @@ p {
     font-size: 18px;
 }
 
+.btn-buy {
+    border-radius: 20px;
+}
+
+.btn-delete {
+    border-radius: 20px;
+}
 
 .btn-add {
     padding: 4px 5px;
