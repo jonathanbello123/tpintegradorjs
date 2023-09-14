@@ -14,6 +14,7 @@ const overlay = document.querySelector(".overlay");
 const successModal = document.querySelector(".add-modal");
 const deleteBtn = document.querySelector(".btn-delete");
 
+
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 

@@ -28,7 +28,6 @@
         position: absolute;
         top: 65px;
         left: 70%;
-        width: 90%;
         flex-direction: column;
         background-color: var(--text-especial);
         border: 2px solid white;
@@ -68,13 +67,8 @@
     }
 
 
-    #Portada {
-        background-size: contain;
-
-    }
-
     #text-content {
-        padding-left: 0;
+        padding-left: 2%;
         width: 100%;
         margin-bottom: 80px;
         gap: 20px;
@@ -210,11 +204,13 @@
 
     #portada {
         background-image: url(/Assets/bgs/bg1.jpg);
+        padding: none;
     }
 
     .span-text {
-        font-size: 30px;
+        font-size: 15px;
         width: 100%;
+        right: 20px
     }
 
     .tittle-gym {
@@ -224,11 +220,16 @@
     .botones {
         width: 100%;
         margin-top: 30px;
+
     }
 
+    .btn-ri {
+        font-size: 10px;
+    }
 
     #text-content {
         justify-content: center;
+        width: 40%;
 
     }
 

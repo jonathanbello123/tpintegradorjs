@@ -156,15 +156,15 @@
             </h3>
             <div class="formulario">
 
-                <form>
+                <form id="formulario">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required><br>
+                    <input type="text" id="nombre" name="nombre"><span class="nameError"></span><br>
 
                     <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required><br>
+                    <input type="text" id="apellido" name="apellido"><span class="lastNameError"></span><br>
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br>
+                    <input type="email" id="email" name="email"><span class="emailError"></span><br>
                     <label for="">Observaciones:</label>
                     <textarea name="" id="" cols="15" rows="2"></textarea>
 
@@ -183,6 +183,7 @@
     <div class="add-modal"></div>
     <script src="/JS/data.js"></script>
     <script src="/JS/index.js"></script>
+    <script src="/JS/form.js"></script>
 </body>
 
 

@@ -94,7 +94,7 @@ main {
 
 #Portada {
     margin-top: 65px;
-    padding: 10% 0;
+    padding: 3% 0;
     background-image: url(/Assets/bgs/bg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,6 +113,7 @@ main {
 
 .tittle-gym {
     color: var(--text-especial);
+    font-size: 70px;
 }
 
 p {
@@ -431,6 +432,15 @@ p {
     font-size: 16px;
 }
 
+.nameError,
+.lastNameError,
+.emailError {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
 .formulario input[type="submit"] {
     width: 100%;
     padding: 15px;
@@ -452,6 +462,10 @@ p {
     padding: 10px;
     margin-bottom: 15px;
     font-size: 16px;
+}
+
+.error {
+    color: red;
 }
 
 #footer {
