@@ -318,8 +318,13 @@
 }
 
 @media (max-width : 442px) {
-    .cart {
-        width: 98%;
+
+    .cart-container {
+        width: 100%;
+    }
+
+    .img-cart {
+        display: none;
     }
 
     #about-us {
