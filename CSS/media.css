@@ -334,4 +334,8 @@
     .secondp {
         font-size: 10px;
     }
+
+    .btn-card2 {
+        display: none;
+    }
 }
