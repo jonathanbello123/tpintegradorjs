@@ -7,7 +7,7 @@ const lastNameError = document.querySelector(".lastNameError")
 const emailEror = document.querySelector(".emailError")
 const emailRegular = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
 
-// validar nombre
+
 
 const validateName = () => {
     if (nameI.value.trim() === "") {
@@ -22,7 +22,7 @@ const validateName = () => {
     }
 }
 
-// validar apellido
+
 
 const validateApellido = () => {
     if (lastName.value.trim() === "") {
@@ -36,7 +36,7 @@ const validateApellido = () => {
     }
 }
 
-// validar email
+
 const validateEmail = () => {
 
     if (!emailRegular.test(email.value)) {
@@ -52,7 +52,7 @@ const validateEmail = () => {
 }
 
 
-// validar todos los datos del form 
+
 
 const validateForm = (e) => {
     e.preventDefault()
@@ -63,7 +63,6 @@ const validateForm = (e) => {
 
     if (!emailEror.classList.contains("error") && !nameError.classList.contains("error") && !lastNameError.classList.contains("error")) {
         alert("El formulario se ha enviado con exito")
-        console.log("nashe")
         lastName.classList.remove('inputError')
         nameI.classList.remove('inputError')
         email.classList.remove('inputError')
