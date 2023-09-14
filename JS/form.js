@@ -78,8 +78,8 @@ const validateForm = (e) => {
 }
 
 
-const xd = () => {
+const init2 = () => {
     form.addEventListener("submit", validateForm)
 }
 
-xd()
+init2()
