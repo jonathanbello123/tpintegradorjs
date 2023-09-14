@@ -316,3 +316,21 @@
         margin-top: 20%;
     }
 }
+
+@media (max-width : 442px) {
+    #about-us {
+        margin-top: 0;
+    }
+
+    .tittle-about {
+        font-size: 40px;
+    }
+
+    .p-about {
+        font-size: 10px;
+    }
+
+    .secondp {
+        font-size: 10px;
+    }
+}
