@@ -331,6 +331,10 @@
         margin-top: 0;
     }
 
+    #text-content {
+        margin-top: 50px;
+    }
+
     .tittle-about {
         font-size: 40px;
         margin-top: 10px;
