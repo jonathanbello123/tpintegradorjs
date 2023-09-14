@@ -318,6 +318,10 @@
 }
 
 @media (max-width : 442px) {
+    .cart {
+        width: 98%;
+    }
+
     #about-us {
         margin-top: 0;
     }
