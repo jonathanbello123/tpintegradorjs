@@ -201,26 +201,29 @@
 @media (max-width: 576px) {
 
 
+    body {
+        max-width: 575px;
+    }
 
-    #portada {
-        background-image: url(/Assets/bgs/bg1.jpg);
-        padding: none;
+    #Portada {
+        background-size: contain;
     }
 
     .span-text {
-        font-size: 15px;
+        font-size: 10px;
         width: 100%;
         right: 20px
     }
 
     .tittle-gym {
         width: 100%;
+        font-size: 15px;
     }
 
     .botones {
         width: 100%;
-        margin-top: 30px;
-
+        margin-top: 5px;
+        font-size: 10px;
     }
 
     .btn-ri {
@@ -231,6 +234,10 @@
         justify-content: center;
         width: 40%;
 
+    }
+
+    .card-container {
+        width: 100%;
     }
 
     .p-about {
@@ -262,19 +269,51 @@
 
     #about-us {
         min-height: 400px;
+        background-size: contain;
+        background-image: none;
+        margin-top: 50px;
     }
+
+    .tittle-about {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .p-about {
+        font-size: 5px;
+        font-weight: 200;
+    }
+
+    .secondp {
+        font-size: 5px;
+        font-weight: 200;
+    }
+
 
     .carrusel-container {
         display: none;
     }
 
+    .btn-card2 {
+        font-size: 10px;
+    }
+
+    #contacto {
+        max-height: 1000px;
+        background-image: none;
+    }
 
 
     .h3_con {
         font-size: 20px;
+        margin-bottom: 20%;
     }
 
     .formulario {
         height: 400px;
+    }
+
+    #footer {
+        margin-top: 20%;
     }
 }

@@ -294,7 +294,7 @@ p {
     min-height: 100vh;
     background-image: url(/Assets/bgs/bg3.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: multiply;
 }
@@ -409,7 +409,7 @@ p {
 
 .formulario {
     padding: 40px;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.8);
     display: flex;
@@ -435,10 +435,14 @@ p {
 .nameError,
 .lastNameError,
 .emailError {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 15px;
     font-size: 16px;
+}
+
+.inputError {
+    border: 2px solid red;
 }
 
 .formulario input[type="submit"] {

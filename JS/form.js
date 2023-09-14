@@ -5,18 +5,19 @@ const email = document.querySelector("#email")
 const nameError = document.querySelector(".nameError")
 const lastNameError = document.querySelector(".lastNameError")
 const emailEror = document.querySelector(".emailError")
-
 const emailRegular = /^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$/;
 
 // validar nombre
 
 const validateName = () => {
     if (nameI.value.trim() === "") {
-        nameError.textContent = "por favor introduce tu nombre"
+        nameError.textContent = "❌por favor introduce tu nombre"
         nameError.classList.add('error')
+
     } else {
         nameError.textContent = ""
         nameError.classList.remove('error')
+
 
     }
 }
@@ -25,7 +26,7 @@ const validateName = () => {
 
 const validateApellido = () => {
     if (lastName.value.trim() === "") {
-        lastNameError.textContent = "por favor introduce tu Apellido"
+        lastNameError.textContent = "❌por favor introduce tu apellido"
         lastNameError.classList.add('error')
 
     } else {
@@ -39,8 +40,9 @@ const validateApellido = () => {
 const validateEmail = () => {
 
     if (!emailRegular.test(email.value)) {
-        emailEror.textContent = "por favor introduce un email valido"
+        emailEror.textContent = "❌por favor introduce un mail valido"
         emailEror.classList.add('error')
+        email.classList.add('inputError')
 
     } else {
         emailEror.textContent = ""
