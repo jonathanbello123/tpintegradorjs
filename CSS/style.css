@@ -6,6 +6,10 @@
     --btntext: #000000;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +17,8 @@
     text-decoration: none;
     list-style-type: none;
     font-family: "Oswald";
+
+
 
 }
 
